@@ -1,9 +1,9 @@
 public static class Primes
 {
-    public static long[] FindPrimeNumbers(long range)
+    public static long[] FindPrimeNumbers(long max)
     {
         var primes = new List<long>();
-        for (long i = 2; i < range; i++)
+        for (long i = 2; i < max; i++)
         {
             var isPrime = true;
             for (long j = 2; j <= Math.Sqrt(i); j++)
