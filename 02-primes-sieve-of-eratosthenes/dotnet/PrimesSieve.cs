@@ -2,23 +2,24 @@ public static class PrimesSieve
 {
     public static long[] FindPrimeNumbersSieve(long max)
     {
+        var b = new bool[max];
         var primes = new List<long>();
+
         for (long i = 2; i < max; i++)
         {
-            var isPrime = true;
-            for (long j = 2; j <= Math.Sqrt(i); j++)
+            if (b[i])
             {
-                if (i % j == 0)
-                {
-                    isPrime = false;
-                    break;
-                }
+                continue;
             }
-            if (isPrime)
+
+            primes.Add(i);
+
+            for (var k = i * i; k < max; k += i)
             {
-                primes.Add(i);
+                b[k] = true;
             }
         }
+
         return primes.ToArray();
     }
 }
