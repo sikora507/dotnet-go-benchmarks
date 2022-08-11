@@ -10,3 +10,5 @@ The python script in the root directory runs all or selected benchmarks, gets th
 ### 01-primes-naive
 Prime numbers search. Naive approach.
 
+### 02-primes-sieve-of-eratosthenes
+Prime numbers search. Optimized approach.
